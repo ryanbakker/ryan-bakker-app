@@ -1,9 +1,10 @@
-import Image from "next/image";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <main className="p-5">
-      <h1>Ryan Bakker</h1>
+    <main>
+      <Hero />
+      <h2>The Front Page</h2>
     </main>
   );
 }
