@@ -387,7 +387,7 @@ p {
   height: 20em;
   width: 20em;
   background-color: #222838;
-  background: linear-gradient(45deg, #1b1f2c, #222838);
+  background: linear-gradient(45deg, #1b1f2c, #2a3145);
   box-shadow: 25px 10px 100px -5px rgba(0, 0, 0, 0.1),
     -25px 10px 100px -12px rgba(0, 0, 0, 0.1);
 }
@@ -445,6 +445,7 @@ p {
   height: 5em;
   width: 5em;
   background-color: #b0b0b0;
+  background: linear-gradient(130deg, #c4c4c4, #787878);
   box-shadow: 25px 0px 50px -5px rgba(0, 0, 0, 0.1),
     -25px 0px 50px -12px rgba(0, 0, 0, 0.1);
 }
@@ -518,13 +519,21 @@ p {
   padding: 3em 0;
 }
 
+.project_section_list a {
+  display: inherit;
+  flex-basis: 20.5em;
+  flex-grow: 2;
+  position: relative;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+}
+
 .project_section_list_item {
   padding: 0;
   background-color: #171717;
   text-align: center;
   transform: perspective(1px) translateZ(0);
-  box-shadow: 25px 0px 50px -5px rgba(0, 0, 0, 0.1),
-    -25px 0px 50px -12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
 }
 
@@ -582,8 +591,10 @@ p {
 
 .project_section_list_item_img img {
   height: auto;
-  width: 18em;
+  min-width: 10em;
+  -o-object-fit: cover;
   object-fit: cover;
+  max-width: 100%;
 }
 
 .project_section_list_item h5 {
@@ -605,6 +616,12 @@ p {
 .contact_form textarea {
   outline: none;
   border: none;
+  border-bottom: 0.5px solid transparent;
+}
+
+.contact_form input:focus,
+.contact_form textarea:focus {
+  border-bottom: 0.5px solid #fff;
 }
 
 .contact_form span {
@@ -625,11 +642,12 @@ p {
   display: initial;
   background-color: #fff;
   padding: 15.5px 0;
+  transition: all 0.3s ease;
 }
 
 .contact_button:hover {
   color: #fff;
-  transition: 0.2s ease;
+  transition: all 0.3s ease;
   background: linear-gradient(250deg, #00baf1, #f16dff, #00baf1);
   background-size: auto;
   background-size: 600% 600%;
@@ -645,25 +663,65 @@ p {
   transition: 0.1s ease;
 }
 
-.back_btn {
-}
-
 .back_btn_icon {
   color: #868686;
 }
 
-.back_btn_icon i:hover {
-  background: linear-gradient(250deg, #00baf1, #f16dff, #00baf1);
-  background-size: auto;
-  background-size: 600% 600%;
-  animation: BluePinkGradient 6s ease infinite;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+.back_btn:hover .back_btn_icon,
+.back_btn:hover .back_btn_text {
+  color: #fff;
+  transition: 0.2s ease;
 }
 
 .back_btn_text {
   color: #868686;
+}
+
+/* Projects Grid */
+
+.projects_grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.2em;
+  padding: 3em 3em;
+}
+
+.projects_grid a {
+  display: inherit;
+  flex-basis: 20.5em;
+  flex-grow: 2;
+  position: relative;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+}
+
+.projects_grid_item {
+  padding: 0;
+  background-color: #171717;
+  text-align: center;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+}
+
+.projects_grid_item_img {
+  padding: 1em;
+}
+
+.projects_grid_item_img img {
+  height: auto;
+  min-width: 10em;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.projects_grid_item h5 {
+  font-size: 1.2em;
+  margin-top: 0;
+  padding-bottom: 1em;
 }
 
 /* Keep at bottom */

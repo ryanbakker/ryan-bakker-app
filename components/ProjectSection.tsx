@@ -17,31 +17,37 @@ const ProjectSection = () => {
 
       <div className="project_section_list">
         {/* Item One */}
-        <div className="project_section_list_item">
-          <div className="project_section_list_item_img">
-            <Image src={RetailerImg} alt="Retailer" />
-          </div>
+        <Link href="/">
+          <div className="project_section_list_item">
+            <div className="project_section_list_item_img">
+              <Image src={RetailerImg} alt="Retailer" />
+            </div>
 
-          <h5>Retailer</h5>
-        </div>
+            <h5>Retailer</h5>
+          </div>
+        </Link>
 
         {/* Item One */}
-        <div className="project_section_list_item">
-          <div className="project_section_list_item_img">
-            <Image src={RetailerImg} alt="Retailer" />
-          </div>
+        <Link href="/">
+          <div className="project_section_list_item">
+            <div className="project_section_list_item_img">
+              <Image src={RetailerImg} alt="Retailer" />
+            </div>
 
-          <h5>Retailer</h5>
-        </div>
+            <h5>Retailer</h5>
+          </div>
+        </Link>
 
         {/* Item One */}
-        <div className="project_section_list_item">
-          <div className="project_section_list_item_img">
-            <Image src={RetailerImg} alt="Retailer" />
-          </div>
+        <Link href="/">
+          <div className="project_section_list_item">
+            <div className="project_section_list_item_img">
+              <Image src={RetailerImg} alt="Retailer" />
+            </div>
 
-          <h5>Retailer</h5>
-        </div>
+            <h5>Retailer</h5>
+          </div>
+        </Link>
       </div>
 
       <div className="flex flex-row gap-6 mt-16">
