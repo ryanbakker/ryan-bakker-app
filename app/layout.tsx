@@ -1,9 +1,9 @@
-import Header from "@/components/Header";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import Header from "@/components/Header";
 
 config.autoAddCss = false;
 library.add(fas);
@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="text-white inter bg-[#1d1d1d]">
         <Header />
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>
