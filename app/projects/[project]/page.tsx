@@ -16,8 +16,6 @@ export default async function Project({ params }: Props) {
 
   const project = await getProject(slug);
 
-  console.log(project);
-
   return (
     <main className="project_single px-8 md:pl-16">
       <Link

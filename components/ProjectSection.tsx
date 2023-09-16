@@ -20,7 +20,7 @@ export default async function ProjectSection() {
       <div className="project_section_list">
         {projects.slice(0, 3).map((project) => (
           <Link key={project._id} href={`/projects/${project.slug}`}>
-            <div className="project_section_list_item">
+            <div className="project_section_list_item ml-auto mr-auto">
               <div className="project_section_list_item_img">
                 <Image
                   src={project.images[0].imageUrl}

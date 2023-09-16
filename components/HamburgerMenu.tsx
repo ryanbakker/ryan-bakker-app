@@ -75,7 +75,7 @@ export default function HamburgerMenu() {
             isOpen ? "menu-open" : "hidden"
           }`}
         >
-          <ul className="flex gap-12">
+          <ul className="flex gap-12 items-center">
             <li>
               <button
                 className="nav_link mobile_link_lg"

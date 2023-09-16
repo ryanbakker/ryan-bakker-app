@@ -27,7 +27,7 @@ const Button = ({
   return (
     <button
       type={type || "button"}
-      className={`custom_btn flex items-center justify-center w-[100%] mr-auto ml-auto md:justify-normal md:ml-0 md:mr-0 ${
+      className={`custom_btn flex items-center justify-center w-[100%] md:w-auto mr-auto ml-auto md:justify-normal md:ml-0 md:mr-0 ${
         style === "solid" ? "solid_btn" : "outlined_btn"
       } ${section === "blue" ? "button_bg_blue" : "button_bg_grey"}`}
       onClick={handleClick}

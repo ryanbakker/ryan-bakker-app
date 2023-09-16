@@ -14,7 +14,7 @@ function Hero() {
 
   return (
     <section className="flex flex-col px-8 md:px-16 md:pt-10 pb-12 leading-7">
-      <div className="flex flex-col-reverse md:flex-row items-center justify-around">
+      <div className="hero_resize flex items-center justify-around">
         <div>
           <Title />
           <h2 className="text-xl uppercase font-light text-gray-300 pt-1.5 tracking-wider inter">

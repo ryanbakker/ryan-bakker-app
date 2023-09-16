@@ -5,10 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import ProjectsGrid from "@/components/ProjectsGrid";
 import { getProjects } from "@/sanity/sanity-utils";
+import type { Metadata } from "next";
+
+export const metadata = {
+  title: "Ryan Bakker - Projects",
+};
 
 export default async function Home() {
-  const projects = await getProjects();
-
   return (
     <main>
       <section>
