@@ -2,14 +2,14 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className="section_padding flex flex-row">
+    <footer className="section_padding flex flex-col md:flex-row">
       <Link href="/">
         <h2 className="barlow uppercase font-semibold text-2xl logo">
           Ryan Bakker
         </h2>
       </Link>
 
-      <ul className="ml-auto flex flex-row gap-8">
+      <ul className="mt-5 md:mt-0 md:ml-auto flex flex-col md:flex-row gap-8">
         <li>
           <Link href="/" className="nav_link">
             Fiverr

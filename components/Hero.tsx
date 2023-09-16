@@ -13,25 +13,29 @@ function Hero() {
   };
 
   return (
-    <section className="flex flex-col px-16 pt-10 pb-12 leading-7">
-      <div className="flex flex-row items-center justify-around">
+    <section className="flex flex-col px-8 md:px-16 md:pt-10 pb-12 leading-7">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-around">
         <div>
           <Title />
           <h2 className="text-xl uppercase font-light text-gray-300 pt-1.5 tracking-wider inter">
             Working under the hood of websites
           </h2>
-          <p className="baseline max-w-3xl mt-10 mb-12 poppins">
+          <p className="mobile_intro baseline max-w-3xl mt-10 mb-12 pr-8 poppins">
+            Front-end Web Developer skilled in crafting SEO-friendly WordPress
+            and Nex.js websites. Self-motivated, detail-oriented problem solver.
+          </p>
+          <p className="desktop_intro baseline max-w-3xl mt-10 mb-12 pr-8 poppins">
             Front-end Web Developer residing in Auckland, New Zealand. With
             experience designing and developing SEO-friendly websites using
             WordPress and Nex.js 13. Self-learning person, and problem solver,
             with an attention to detail.
           </p>
-          <div className="mb-10 flex flex-row gap-6">
+          <div className="mb-10 flex flex-col md:flex-row gap-6">
             <Button title="My Work" style="solid" />
             <Button title="Get In Touch" style="outlined" />
           </div>
         </div>
-        <div className="flex-1 flex flex-col justify-center items-center mt-10">
+        <div className="marginleft_shift flex-1 flex flex-col justify-center items-center mt-4 md:mt-10">
           <div className="hero_graphic">
             <span className="hero_graphic_small_square"></span>
             <Image

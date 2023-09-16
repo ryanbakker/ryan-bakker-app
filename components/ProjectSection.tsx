@@ -1,10 +1,12 @@
 import React from "react";
 import Button from "./Button";
 import Image from "next/image";
-import RetailerImg from "../public/retailer-current-listing.png";
 import Link from "next/link";
+import { getProjects } from "@/sanity/sanity-utils";
 
-const ProjectSection = () => {
+export default async function ProjectSection() {
+  const projects = await getProjects();
+
   return (
     <section className="section_padding" id="showcase">
       <h3 className="section_title">Some Of My Work</h3>
@@ -16,41 +18,26 @@ const ProjectSection = () => {
       </p>
 
       <div className="project_section_list">
-        {/* Item One */}
-        <Link href="/">
-          <div className="project_section_list_item">
-            <div className="project_section_list_item_img">
-              <Image src={RetailerImg} alt="Retailer" />
+        {projects.slice(0, 3).map((project) => (
+          <Link key={project._id} href={`/projects/${project.slug}`}>
+            <div className="project_section_list_item">
+              <div className="project_section_list_item_img">
+                <Image
+                  src={project.images[0].imageUrl}
+                  alt={project.images[0].alt}
+                  width={400}
+                  height={400}
+                  className="object-cover"
+                />
+              </div>
+
+              <h5>{project.title}</h5>
             </div>
-
-            <h5>Retailer</h5>
-          </div>
-        </Link>
-
-        {/* Item One */}
-        <Link href="/">
-          <div className="project_section_list_item">
-            <div className="project_section_list_item_img">
-              <Image src={RetailerImg} alt="Retailer" />
-            </div>
-
-            <h5>Retailer</h5>
-          </div>
-        </Link>
-
-        {/* Item One */}
-        <Link href="/">
-          <div className="project_section_list_item">
-            <div className="project_section_list_item_img">
-              <Image src={RetailerImg} alt="Retailer" />
-            </div>
-
-            <h5>Retailer</h5>
-          </div>
-        </Link>
+          </Link>
+        ))}
       </div>
 
-      <div className="flex flex-row gap-6 mt-16">
+      <div className="flex flex-col md:flex-row gap-6 mt-16">
         <Link href="/projects">
           <Button title="View Projects" style="solid" />
         </Link>
@@ -63,6 +50,4 @@ const ProjectSection = () => {
       </div>
     </section>
   );
-};
-
-export default ProjectSection;
+}

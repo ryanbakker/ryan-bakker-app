@@ -6,7 +6,7 @@ import { getProjects } from "@/sanity/sanity-utils";
 export default async function ProjectsGrid() {
   const projects = await getProjects();
   return (
-    <div className="px-16 pt-2 pb-20 projects_page_list">
+    <div className="px-8 md:px-16 pt-2 pb-20 projects_page_list">
       {projects.map((project) => (
         <Link key={project._id} href={`/projects/${project.slug}`}>
           <div className="projects_list_item">

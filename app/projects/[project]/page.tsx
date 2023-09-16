@@ -16,8 +16,10 @@ export default async function Project({ params }: Props) {
 
   const project = await getProject(slug);
 
+  console.log(project);
+
   return (
-    <main className="project_single pl-16">
+    <main className="project_single px-8 md:pl-16">
       <Link
         href="/projects"
         className="mr-auto mb-8 flex items-center justify-center gap-2 text-white/50 back_btn"
@@ -33,45 +35,65 @@ export default async function Project({ params }: Props) {
 
       <section className="project_single_content">
         <div className="project_single_images">
-          <Image
-            src={project.images[0].imageUrl}
-            alt={project.images[0].alt}
-            width={500}
-            height={400}
-            className="object-cover"
-          />
-          <Image
-            src={project.images[1].imageUrl}
-            alt={project.images[1].alt}
-            width={500}
-            height={400}
-            className="object-cover"
-          />
-          <Image
-            src={project.images[2].imageUrl}
-            alt={project.images[2].alt}
-            width={500}
-            height={400}
-            className="object-cover"
-          />
-          <Image
-            src={project.images[3].imageUrl}
-            alt={project.images[3].alt}
-            width={500}
-            height={400}
-            className="object-cover"
-          />
+          {project.images[0].imageUrl ? (
+            <Image
+              src={project.images[0].imageUrl}
+              alt={project.images[0].alt}
+              width={500}
+              height={400}
+              className="object-cover"
+            />
+          ) : null}
+          {project.images[1].imageUrl ? (
+            <Image
+              src={project.images[1].imageUrl}
+              alt={project.images[1].alt}
+              width={500}
+              height={400}
+              className="object-cover"
+            />
+          ) : null}
+          {project.images.length >= 3 && project.images[2].imageUrl ? (
+            <Image
+              src={project.images[2].imageUrl}
+              alt={project.images[2].alt}
+              width={500}
+              height={400}
+              className="object-cover"
+            />
+          ) : null}
+          {project.images.length >= 4 && project.images[3].imageUrl ? (
+            <Image
+              src={project.images[3].imageUrl}
+              alt={project.images[3].alt}
+              width={500}
+              height={400}
+              className="object-cover"
+            />
+          ) : null}
         </div>
 
         <div className="project_single_text flex-1 flex flex-col gap-8">
           <div className="project_single_text_github">
             <h3>GitHub</h3>
-            <a>Go To GitHub Repository</a>
+            <a
+              href={project.github}
+              target="_blank"
+              className="project_external_link"
+            >
+              Go To Repository
+            </a>
           </div>
 
-          <div>
+          <div style={{ display: project.livebuild ? "block" : "none" }}>
             <h3>Live Build</h3>
-            <a>Go To Live Build</a>
+            <a
+              href={project.livebuild}
+              target="_blank"
+              className="project_external_link"
+            >
+              Go To Build
+            </a>
           </div>
 
           <div className="project_single_text_client">

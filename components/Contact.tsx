@@ -6,7 +6,7 @@ import SocialIcons from "./SocialIcons";
 const Contact = () => {
   return (
     <section
-      className="section_blue section_padding flex flex-row"
+      className="section_blue section_padding flex flex-col md:flex-row"
       id="contact"
     >
       <div className="mt-6">
@@ -28,7 +28,7 @@ const Contact = () => {
 
         <SocialIcons />
       </div>
-      <form className="contact_form mx-auto flex flex-col gap-4">
+      <form className="contact_form mt-12 md:mt-0 md:mx-auto flex flex-col gap-4">
         <span>
           <input placeholder="name" />
         </span>
