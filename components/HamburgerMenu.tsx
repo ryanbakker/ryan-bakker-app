@@ -46,7 +46,11 @@ export default function HamburgerMenu() {
             </button>
           </li>
           <li>
-            <Link href="/" className="nav_link" target="_blank">
+            <Link
+              href="/ryan-bakker-resume-17-08-23.pdf"
+              className="nav_link"
+              target="_blank"
+            >
               Resume
             </Link>
           </li>
@@ -102,7 +106,7 @@ export default function HamburgerMenu() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/ryan-bakker-resume-17-08-23.pdf"
                 className="nav_link mobile_link_lg"
                 target="_blank"
               >

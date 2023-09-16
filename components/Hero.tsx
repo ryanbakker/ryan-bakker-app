@@ -31,8 +31,12 @@ function Hero() {
             with an attention to detail.
           </p>
           <div className="mb-10 flex flex-col md:flex-row gap-6">
-            <Button title="My Work" style="solid" />
-            <Button title="Get In Touch" style="outlined" />
+            <a href="#showcase">
+              <Button title="My Work" style="solid" />
+            </a>
+            <a href="#contact">
+              <Button title="Get In Touch" style="outlined" />
+            </a>
           </div>
         </div>
         <div className="marginleft_shift flex-1 flex flex-col justify-center items-center mt-4 md:mt-10">
