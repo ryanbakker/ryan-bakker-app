@@ -97,7 +97,7 @@ export default function HamburgerMenu() {
             isOpen ? "menu-open" : "menu-closed"
           }`}
         >
-          <ul className="flex gap-16 items-center">
+          <ul className="flex gap-8 items-center">
             <li>
               <button
                 className="nav_link mobile_link_lg"
