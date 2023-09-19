@@ -8,9 +8,23 @@ import Image from "next/image";
 export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
+  const scrollToSectionTop = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  // Close the mobile menu when a link is clicked
+  const closeMobileMenu = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -60,7 +74,7 @@ export default function HamburgerMenu() {
         className={`hamburger_icon md:hidden flex items-center ml-auto ${
           isOpen ? "hamburger_active" : ""
         }`}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={handleClick}
         aria-label="hamburger button"
       >
         <span className="hamburger_line hamburger_icon_line_top"></span>
@@ -70,20 +84,27 @@ export default function HamburgerMenu() {
 
       <div
         className={`menu_container_box relative ${
-          isOpen ? "menu-open" : "hidden"
+          isOpen ? "menu-open" : "menu-closed"
         }`}
       >
-        <div className="menu_container_backdrop"></div>
+        <div
+          className={`menu_container_backdrop ${
+            isOpen ? "backdrop-open" : "backdrop-closed"
+          }`}
+        ></div>
         <nav
           className={`menu_container md:hidden w-full pt-9 ${
-            isOpen ? "menu-open" : "hidden"
+            isOpen ? "menu-open" : "menu-closed"
           }`}
         >
-          <ul className="flex gap-12 items-center">
+          <ul className="flex gap-16 items-center">
             <li>
               <button
                 className="nav_link mobile_link_lg"
-                onClick={() => scrollToSection("about")}
+                onClick={() => {
+                  scrollToSectionTop("about");
+                  closeMobileMenu(); // Close the mobile menu after clicking a link
+                }}
               >
                 About
               </button>
@@ -91,7 +112,10 @@ export default function HamburgerMenu() {
             <li>
               <button
                 className="nav_link mobile_link_lg"
-                onClick={() => scrollToSection("showcase")}
+                onClick={() => {
+                  scrollToSectionTop("showcase");
+                  closeMobileMenu(); // Close the mobile menu after clicking a link
+                }}
               >
                 Work
               </button>
@@ -99,7 +123,10 @@ export default function HamburgerMenu() {
             <li>
               <button
                 className="nav_link mobile_link_lg"
-                onClick={() => scrollToSection("contact")}
+                onClick={() => {
+                  scrollToSection("contact");
+                  closeMobileMenu(); // Close the mobile menu after clicking a link
+                }}
               >
                 Contact
               </button>
