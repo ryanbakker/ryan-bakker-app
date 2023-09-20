@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import SocialIcons from "./SocialIcons";
 
@@ -28,29 +26,6 @@ const Contact = () => {
 
         <SocialIcons />
       </div>
-      <form className="contact_form mt-12 md:mt-0 md:mx-auto flex flex-col gap-4">
-        <span>
-          <input placeholder="name" />
-        </span>
-
-        <span>
-          <input placeholder="email" />
-        </span>
-
-        <span>
-          <input placeholder="phone" />
-        </span>
-
-        <span>
-          <textarea className="resize-none h-40" placeholder="message" />
-        </span>
-
-        <div className="block relative">
-          <div className="contact_button_wrapper">
-            <button className="contact_button">Submit</button>
-          </div>
-        </div>
-      </form>
     </section>
   );
 };

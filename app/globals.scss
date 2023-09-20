@@ -32,6 +32,13 @@ body {
   overflow-x: hidden;
 }
 
+// ------ Disable scroll when hamburger is active ------
+
+.disable-scroll {
+  height: 100%;
+  overflow: hidden !important;
+}
+
 p {
   font-family: "Poppins", sans-serif;
 }

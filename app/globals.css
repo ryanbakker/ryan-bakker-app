@@ -29,6 +29,11 @@ body {
   overflow-x: hidden;
 }
 
+.disable-scroll {
+  height: 100%;
+  overflow: hidden !important;
+}
+
 p {
   font-family: "Poppins", sans-serif;
 }

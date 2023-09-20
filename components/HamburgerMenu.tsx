@@ -4,9 +4,27 @@ import LinkedinLogo from "../public/linkedin.svg";
 import GithubLogo from "../public/github.svg";
 import EmailIcon from "../public/at-solid.svg";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const htmlElement = document.documentElement; // Select the HTML element
+
+    if (isOpen) {
+      // Add the class to toggle scrolling
+      htmlElement.classList.add("disable-scroll");
+    } else {
+      // Remove the class to enable scrolling
+      htmlElement.classList.remove("disable-scroll");
+    }
+
+    // Clean up the effect when the component unmounts
+    return () => {
+      htmlElement.classList.remove("disable-scroll");
+    };
+  }, [isOpen]);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
