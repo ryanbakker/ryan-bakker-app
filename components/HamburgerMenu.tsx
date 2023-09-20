@@ -54,28 +54,34 @@ export default function HamburgerMenu() {
       >
         <ul className="flex gap-12">
           <li>
-            <button
-              className="nav_link"
-              onClick={() => scrollToSection("about")}
-            >
-              About
-            </button>
+            <a href="/#about">
+              <button
+                className="nav_link"
+                onClick={() => scrollToSection("about")}
+              >
+                About
+              </button>
+            </a>
           </li>
           <li>
-            <button
-              className="nav_link"
-              onClick={() => scrollToSection("showcase")}
-            >
-              Work
-            </button>
+            <a href="/#showcase">
+              <button
+                className="nav_link"
+                onClick={() => scrollToSection("showcase")}
+              >
+                Work
+              </button>
+            </a>
           </li>
           <li>
-            <button
-              className="nav_link"
-              onClick={() => scrollToSection("contact")}
-            >
-              Contact
-            </button>
+            <a href="/#contact">
+              <button
+                className="nav_link"
+                onClick={() => scrollToSection("contact")}
+              >
+                Contact
+              </button>
+            </a>
           </li>
           <li>
             <Link

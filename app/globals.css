@@ -435,6 +435,10 @@ p {
   height: 25px;
   max-width: 25px;
   filter: invert(1);
+  transition: 0.1s ease;
+}
+.social_icon:hover {
+  opacity: 0.75;
 }
 
 .about_image {
