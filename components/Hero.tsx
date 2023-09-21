@@ -48,6 +48,7 @@ function Hero() {
               height={300}
               width={300}
               className="hero_graphic_img"
+              loading="eager"
             />
             <span className="hero_graphic_star_one">+</span>
             <span className="hero_graphic_star_two">+</span>

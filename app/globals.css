@@ -594,16 +594,18 @@ p {
   transition: 0.1s ease;
 }
 
-.back_btn_icon {
+.back_btn .back_btn_icon {
   color: #868686;
+  width: 1rem;
 }
-.back_btn_icon:hover .back_btn_icon,
-.back_btn_icon:hover .back_btn_text {
+.back_btn .back_btn_text {
+  color: #868686;
+  min-width: 4rem;
+}
+.back_btn:hover .back_btn_icon,
+.back_btn:hover .back_btn_text {
   color: #fff;
-  transition: 0.2s ease;
-}
-.back_btn_icon .back_btn_text {
-  color: #868686;
+  transition: 0.2s ease-in-out;
 }
 
 .projects_page_banner {
