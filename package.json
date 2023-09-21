@@ -39,6 +39,6 @@
   "devDependencies": {
     "@sanity/eslint-config-studio": "^2.0.4",
     "@types/react-burger-menu": "^2.8.3",
-    "sass": "^1.66.1"
+    "sass": "^1.68.0"
   }
 }

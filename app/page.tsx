@@ -1,10 +1,7 @@
-// Home Page
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import About from "@/components/About";
 import ProjectSection from "@/components/ProjectSection";
+import Contact from "@/components/Contact";
 import ResumeSection from "@/components/ResumeSection";
 
 export default function Home() {

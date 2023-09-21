@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import HeroImage from "../public/headshot.webp";
+import HeroImage from "../public/ryan-bakker-head.webp";
 import Title from "./Title";
 import Button from "./Button";
 import { ArrowDownCircleIcon } from "@heroicons/react/24/solid";

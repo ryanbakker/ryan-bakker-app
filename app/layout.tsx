@@ -1,12 +1,6 @@
 import "./globals.css";
-import Footer from "@/components/Footer";
-import { config, library } from "@fortawesome/fontawesome-svg-core";
-import { fas } from "@fortawesome/free-solid-svg-icons";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 import Header from "@/components/Header";
-
-config.autoAddCss = false;
-library.add(fas);
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Ryan Bakker - Web Developer",
@@ -50,7 +44,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="text-white inter bg-[#1d1d1d]">
+      <body>
         <Header />
         {children}
         <Footer />

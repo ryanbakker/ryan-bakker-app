@@ -12,16 +12,15 @@ const Contact = () => {
         <p className="max-w-2xl leading-7">
           I am interested in freelance web development opportunities. If you
           have any queries, feel free to use the contact form or send me a
-          direct email below. Alternatively, you can go to my Fiverr page to
-          submit an order for a website{" "}
+          direct email below. Alternatively, you can go to my Fiverr page to{" "}
           <Link
             className="inline_link"
             href="https://www.fiverr.com/s/xKoR9B"
             target="_blank"
           >
-            here
+            submit an order
           </Link>
-          .
+          &nbsp; for a website.
         </p>
 
         <SocialIcons />

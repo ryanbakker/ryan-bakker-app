@@ -31,7 +31,7 @@ export default async function ProjectSection() {
                 />
               </div>
 
-              <h5>{project.title}</h5>
+              <h4>{project.title}</h4>
             </div>
           </Link>
         ))}

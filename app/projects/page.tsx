@@ -1,11 +1,7 @@
 import Link from "next/link";
-import GoBack from "../../public/circle-arrow-down-solid.svg";
-import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import ProjectsGrid from "@/components/ProjectsGrid";
-import { getProjects } from "@/sanity/sanity-utils";
-import type { Metadata } from "next";
 
 export const metadata = {
   title: "Ryan Bakker - Projects",

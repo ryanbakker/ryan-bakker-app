@@ -1,5 +1,5 @@
 import Image from "next/image";
-import AboutImg from "../public/about-img.webp";
+import AboutImg from "../public/ryan-bakker-night.webp";
 import Link from "next/link";
 import SocialIcons from "./SocialIcons";
 
@@ -41,13 +41,13 @@ const About = () => {
           gained experience in Adobe, Figma, and Github. Currently, I am focused
           on expanding my skillset. Learning the new Next.js 13 framework,
           paired with TypeScript and TailwindCSS. You can find examples of my
-          work on my GitHub profile{" "}
+          work on my{" "}
           <Link
             className="inline_link"
             href="https://github.com/ryanbakkerNZ"
             target="_blank"
           >
-            here
+            Github profile
           </Link>
           .
           <br />

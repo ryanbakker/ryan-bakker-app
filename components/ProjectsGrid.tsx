@@ -1,7 +1,8 @@
+import React from "react";
 import Link from "next/link";
-import RetailerImg from "../public/retailer-current-listing.png";
 import Image from "next/image";
 import { getProjects } from "@/sanity/sanity-utils";
+import styles from "./ProjectsGrid.module.css";
 
 export default async function ProjectsGrid() {
   const projects = await getProjects();
@@ -9,8 +10,8 @@ export default async function ProjectsGrid() {
     <div className="px-8 md:px-16 pt-2 pb-20 projects_page_list">
       {projects.map((project) => (
         <Link key={project._id} href={`/projects/${project.slug}`}>
-          <div className="projects_list_item">
-            <div className="projects_list_item_img">
+          <div className={styles.projects_list_item}>
+            <div className={styles.projects_list_item_img}>
               <Image
                 src={project.images[0].imageUrl}
                 alt={project.images[0].alt}
