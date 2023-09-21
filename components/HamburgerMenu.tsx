@@ -88,7 +88,7 @@ export default function HamburgerMenu() {
               href="/ryan-bakker-resume.pdf"
               className="nav_link"
               target="_blank"
-              passHref
+              rel="nofollow"
             >
               Resume
             </Link>
@@ -161,7 +161,7 @@ export default function HamburgerMenu() {
                 href="/ryan-bakker-resume.pdf"
                 className="nav_link mobile_link_lg"
                 target="_blank"
-                passHref
+                rel="nofollow"
               >
                 Resume
               </Link>

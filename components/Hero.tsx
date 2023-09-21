@@ -1,17 +1,10 @@
-"use client";
-
 import Image from "next/image";
 import HeroImage from "../public/ryan-bakker-head.webp";
 import Title from "./Title";
 import Button from "./Button";
-import { ArrowDownCircleIcon } from "@heroicons/react/24/solid";
+import ScrollDown from "./ScrollDown";
 
 function Hero() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth", block: "center" });
-  };
-
   return (
     <section className="flex flex-col px-8 md:px-16 md:pt-10 pb-12 leading-7">
       <div className="hero_resize flex items-center justify-around">
@@ -62,13 +55,7 @@ function Hero() {
         </div>
       </div>
 
-      <button
-        onClick={() => scrollToSection("about")}
-        className="scroll_down_btn flex flex-row items-center mt-28 max-w-xs"
-      >
-        Scroll Down &nbsp;{" "}
-        <ArrowDownCircleIcon className="h-4 w-4 text-white hvr-icon" />
-      </button>
+      <ScrollDown />
     </section>
   );
 }

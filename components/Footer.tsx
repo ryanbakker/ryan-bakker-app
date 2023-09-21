@@ -35,7 +35,7 @@ function Footer() {
             href="/ryan-bakker-resume.pdf"
             className="nav_link"
             target="_blank"
-            passHref
+            rel="nofollow"
           >
             Resume
           </Link>

@@ -28,6 +28,7 @@ export default async function ProjectSection() {
                   width={400}
                   height={400}
                   className="object-cover"
+                  quality={40}
                 />
               </div>
 
