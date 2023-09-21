@@ -65,6 +65,7 @@ const About = () => {
         src={AboutImg}
         alt="Ryan Bakker under lights"
         className="mx-auto object-contain md:max-w-lg about_image"
+        quality={40}
       />
     </section>
   );
