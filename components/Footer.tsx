@@ -32,9 +32,10 @@ function Footer() {
         </li>
         <li>
           <Link
-            href="/ryan-bakker-resume-17-08-23.pdf"
+            href="/ryan-bakker-resume.pdf"
             className="nav_link"
             target="_blank"
+            passHref
           >
             Resume
           </Link>

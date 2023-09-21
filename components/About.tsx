@@ -1,5 +1,5 @@
 import Image from "next/image";
-import AboutImg from "../public/ryan-bakker-night.webp";
+import AboutImg from "../public/ryan-bakker-portrait.webp";
 import Link from "next/link";
 import SocialIcons from "./SocialIcons";
 
