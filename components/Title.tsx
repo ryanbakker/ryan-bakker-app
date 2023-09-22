@@ -35,9 +35,12 @@ const Title = () => {
   }, []);
 
   return (
-    <h1 className="title">
+    <h1 className="title text-[#1d1d1d] dark:text-white">
       Hi I&apos;m Ryan, <br /> A{" "}
-      <span className="title_span" id="typewriter">
+      <span
+        className="title_span after:border-r-purple-500 dark:after:border-r-white"
+        id="typewriter"
+      >
         Web Developer
       </span>
     </h1>

@@ -28,7 +28,9 @@ const Button = ({
     <button
       type={type || "button"}
       className={`custom_btn flex items-center justify-center w-[100%] md:w-auto mr-auto ml-auto md:justify-normal md:ml-0 md:mr-0 gap-1 ${
-        style === "solid" ? "solid_btn" : "outlined_btn"
+        style === "solid"
+          ? "solid_btn hover:bg-[#222838] dark:hover:bg-[#1d1d1d]"
+          : "outlined_btn bg-[#222838] border-[#222838] dark:bg-[#1d1d1d] dark:border-white dark:hover:border-[#1d1d1d] dark:hover:bg-[#1d1d1d]!important"
       } ${section === "blue" ? "button_bg_blue" : "button_bg_grey"}`}
       onClick={handleClick}
     >

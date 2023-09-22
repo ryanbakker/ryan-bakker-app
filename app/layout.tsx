@@ -1,6 +1,8 @@
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import { ThemeProvider } from "./theme-provider";
 
 export const metadata = {
   title: "Ryan Bakker - Web Developer",
@@ -44,10 +46,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        {children}
-        <Footer />
+      <body className="bg-[#e0edf9] dark:bg-[#1d1d1d]">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeSwitcher />
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

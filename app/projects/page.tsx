@@ -25,8 +25,10 @@ export default async function Home() {
         </div>
 
         <div className="py-14 px-8 md:px-16 pt-10 pb-10">
-          <h1 className="section_title">Projects Page</h1>
-          <p className="mobile_project_page_summary max-w-3xl leading-7">
+          <h1 className="section_title text-[#1d1d1d] dark:text-white">
+            Projects Page
+          </h1>
+          <p className="mobile_project_page_summary max-w-3xl leading-7 text-[#1d1d1d] dark:text-white">
             Explore my portfolio showcasing projects that contributed to my
             diplomas. I use Next.js for most projects, while others are built
             with WordPress or bare HTML. Some include GitHub links and live
@@ -40,7 +42,7 @@ export default async function Home() {
             </Link>
             .
           </p>
-          <p className="desktop_project_page_summary max-w-3xl leading-7">
+          <p className="desktop_project_page_summary max-w-3xl leading-7 text-[#1d1d1d] dark:text-white">
             View a selection of my projects, a couple of which contributed to my
             diplomas. Most projects are built using Next.js, with the rest using
             WordPress or bare HTML code. Some projects contain links to GitHub

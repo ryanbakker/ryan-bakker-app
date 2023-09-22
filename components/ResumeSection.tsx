@@ -5,7 +5,9 @@ import ButtonIcon from "../public/file-solid.svg";
 const ResumeSection = () => {
   return (
     <section className="section_padding resume_section" id="resume-section">
-      <h3 className="section_title">Check Out My Resume</h3>
+      <h3 className="section_title text-[#1d1d1d] dark:text-white">
+        Check Out My Resume
+      </h3>
       <a href="/ryan-bakker-resume.pdf" target="_blank" rel="nofollow">
         <Button title="Go To Resume" style="solid" rightIcon={ButtonIcon} />
       </a>

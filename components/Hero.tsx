@@ -10,14 +10,14 @@ function Hero() {
       <div className="hero_resize flex items-center justify-around">
         <div>
           <Title />
-          <h2 className="text-xl uppercase font-light text-gray-300 pt-1.5 tracking-wider inter">
+          <h2 className="text-xl uppercase font-light text-[#2a2a2a] dark:text-gray-300 pt-1.5 tracking-wider inter">
             Working under the hood of websites
           </h2>
-          <p className="mobile_intro baseline max-w-3xl mt-10 mb-12 pr-8 poppins">
+          <p className="mobile_intro baseline max-w-3xl mt-10 mb-12 pr-8 poppins text-black dark:text-white">
             Front-end Web Developer skilled in crafting SEO-friendly WordPress
             and Nex.js websites. Self-motivated, detail-oriented problem solver.
           </p>
-          <p className="desktop_intro baseline max-w-3xl mt-10 mb-12 pr-8 poppins">
+          <p className="desktop_intro baseline max-w-3xl mt-10 mb-12 pr-8 poppins text-black dark:text-white">
             Front-end Web Developer residing in Auckland, New Zealand. With
             experience designing and developing SEO-friendly websites using
             WordPress and Nex.js 13. Self-learning person, and problem solver,

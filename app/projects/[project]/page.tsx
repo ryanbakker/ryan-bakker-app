@@ -25,8 +25,10 @@ export default async function Project({ params }: Props) {
       </Link>
 
       <section className="project_single_banner">
-        <h1>{project.title}</h1>
-        <h2>Completed {project.date}</h2>
+        <h1 className="text-[#1d1d1d] dark:text-white">{project.title}</h1>
+        <h2 className="text-[#1d1d1d] dark:text-white">
+          Completed {project.date}
+        </h2>
       </section>
 
       <section className="project_single_content">

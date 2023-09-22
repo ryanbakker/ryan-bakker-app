@@ -56,7 +56,7 @@ export default function HamburgerMenu() {
           <li>
             <a href="/#about">
               <button
-                className="nav_link"
+                className="nav_link text-[#1d1d1d] dark:text-white"
                 onClick={() => scrollToSection("about")}
               >
                 About
@@ -66,7 +66,7 @@ export default function HamburgerMenu() {
           <li>
             <a href="/#showcase">
               <button
-                className="nav_link"
+                className="nav_link text-[#1d1d1d] dark:text-white"
                 onClick={() => scrollToSection("showcase")}
               >
                 Work
@@ -76,7 +76,7 @@ export default function HamburgerMenu() {
           <li>
             <a href="/#contact">
               <button
-                className="nav_link"
+                className="nav_link text-[#1d1d1d] dark:text-white"
                 onClick={() => scrollToSection("contact")}
               >
                 Contact
@@ -86,7 +86,7 @@ export default function HamburgerMenu() {
           <li>
             <Link
               href="/ryan-bakker-resume.pdf"
-              className="nav_link"
+              className="nav_link text-[#1d1d1d] dark:text-white"
               target="_blank"
               rel="nofollow"
             >
@@ -118,14 +118,14 @@ export default function HamburgerMenu() {
           }`}
         ></div>
         <nav
-          className={`menu_container md:hidden w-full pt-9 ${
+          className={`menu_container md:hidden w-full pt-9 bg-[#a6bed4] dark:bg-[#171717] ${
             isOpen ? "menu-open" : "menu-closed"
           }`}
         >
           <ul className="flex gap-8 items-center">
             <li>
               <button
-                className="nav_link mobile_link_lg"
+                className="nav_link mobile_link_lg text-[#1d1d1d] dark:text-white"
                 onClick={() => {
                   scrollToSectionTop("about");
                   closeMobileMenu(); // Close the mobile menu after clicking a link
@@ -136,7 +136,7 @@ export default function HamburgerMenu() {
             </li>
             <li>
               <button
-                className="nav_link mobile_link_lg"
+                className="nav_link mobile_link_lg text-[#1d1d1d] dark:text-white"
                 onClick={() => {
                   scrollToSectionTop("showcase");
                   closeMobileMenu(); // Close the mobile menu after clicking a link
@@ -147,7 +147,7 @@ export default function HamburgerMenu() {
             </li>
             <li>
               <button
-                className="nav_link mobile_link_lg"
+                className="nav_link mobile_link_lg text-[#1d1d1d] dark:text-white"
                 onClick={() => {
                   scrollToSection("contact");
                   closeMobileMenu(); // Close the mobile menu after clicking a link
@@ -159,7 +159,7 @@ export default function HamburgerMenu() {
             <li>
               <Link
                 href="/ryan-bakker-resume.pdf"
-                className="nav_link mobile_link_lg"
+                className="nav_link mobile_link_lg text-[#1d1d1d] dark:text-white"
                 target="_blank"
                 rel="nofollow"
               >
@@ -176,14 +176,18 @@ export default function HamburgerMenu() {
               <Image
                 src={LinkedinLogo}
                 alt="Linkedin"
-                className="social_icon"
+                className="nav_social_icon invert-1"
               />
             </Link>
             <Link href="https://github.com/ryanbakkerNZ" target="_blank">
-              <Image src={GithubLogo} alt="GitHub" className="social_icon" />
+              <Image
+                src={GithubLogo}
+                alt="GitHub"
+                className="nav_social_icon"
+              />
             </Link>
             <Link href="rmbakker2002@gmail.com" target="_blank">
-              <Image src={EmailIcon} alt="Email" className="social_icon" />
+              <Image src={EmailIcon} alt="Email" className="nav_social_icon" />
             </Link>
           </div>
         </nav>
