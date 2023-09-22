@@ -61,6 +61,8 @@ export default async function Home() {
         </div>
 
         <ProjectsGrid />
+
+        <span className="flex justify-center text-gray-300">More to come!</span>
       </section>
     </main>
   );
